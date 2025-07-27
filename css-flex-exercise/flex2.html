@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+</head>
+<style>
+    .narrow,.wide {
+        background-color: papayawhip;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: blue;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        margin: 5px;
+    }
+    .narrow{
+        border-top: 2px solid #000;
+        border-right: 2px solid #000;
+        margin: 5px;
+        font-size: larger;
+    }
+    .wide{
+        font-size: small;
+    }
+    .left-links, .right-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding: 5px 10px;
+        align-content: space-between;
+        gap: 10px;
+    }
+    .logo ,.narrow-logo {
+        color: red;
+    }
+    li { 
+        list-style: none;
+        background-color: #fff;
+        padding: 10px;
+    }
+    a {
+        text-decoration: none;
+    }
+    .logo{
+        font-size: 40px;
+    }
+    .narrow-logo{
+        font-size: 30px;
+    }
+</style>
+<body>
+    <p>Narrow:</p>
+    <div class="narrow">
+        <div class="Wide">
+            <ul class="left-links">
+                <li><a href="#">one</a></li>
+                <li><a href="#">two</a></li>
+                <li><a href="#">three</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="logo">Logo</div>
+        </div>
+        <div>
+           <ul class="right-links">
+                <li><a href="#">four</a></li>
+                <li><a href="#">five</a></li>
+                <li><a href="#">six</a></li>
+           </ul>
+        </div> 
+    </div>
+    <p>Wide:</p>
+    <div class="wide">
+        <div class="Wide">
+            <ul class="left-links">
+                <li><a href="#">one</a></li>
+                <li><a href="#">two</a></li>
+                <li><a href="#">three</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="narrow-logo">Logo</div>
+        </div>
+        <div>
+           <ul class="right-links">
+                <li><a href="#">four</a></li>
+                <li><a href="#">five</a></li>
+                <li><a href="#">six</a></li>
+           </ul>
+        </div> 
+    </div>
+</body>
+</html>
