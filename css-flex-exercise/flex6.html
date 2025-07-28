@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restructure Repo Into Courses and Groups</title>
+</head>
+<style>
+    html,body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    font-size: medium;
+}
+header a {
+    text-decoration: none;
+    color: black;
+    margin-right: 15px;
+}
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:whitesmoke;
+    height: 30px;
+    width: 100%;
+    padding: 10px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+}
+footer a {
+    text-decoration: none;
+    color:black;
+    margin:15px 10px;
+    padding: 15px 10px;
+    font-size: medium;
+    
+}
+.items { 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.items img{
+    width: 600px;
+    height: 300px;
+    transform: translateY(120px);
+}
+
+.my-box {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    width: 500px;
+    box-sizing: border-box;
+    transform: translateY(80px);
+}
+
+.button {
+    display: flex;
+    font-weight: bolder;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    transform: translateY(100px);
+}
+.do, .do-other {
+    padding: 8px 16px;
+    border: transparent;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    color: black
+    cursor: pointer;
+    transition: background-color 0.3s;
+    linearGradient:active-view-transition
+}
+.do:hover, .do-other:hover {
+    background-color: #0056b3;
+}
+@keyframes slideRight{
+    100%{transform: translateX(0);}
+    50%{transform: translateX(-50px);}
+    50%{transform: translateX(100px);}
+    100%{transform: translateX(0);}
+}
+.prof,.ab,.footer-section {
+    animation:slideRight 7.5s ease-in infinite;
+}
+</style>
+<body>
+<div class="Layout-container">
+    <header>
+        <div class="ab">
+            <a href="#">About</a>&nbsp;&nbsp;<a href="#">Store</a>
+        </div>
+        <div class="prof">
+            <a href="#">Profile</a>&nbsp;&nbsp;<a href="#">Settings</a>
+        </div>
+    </header>
+    <div class="items">
+        <div><img src="image/odin1.png" alt="Icon"></div>
+        <input type="text" class="my-box" placeholder="">
+        <div class="button">
+            <button class="do">Do the thing!</button>
+            <button class="do-other">Do the other thing!</button>
+        </div>
+    </div>
+    <br/>
+    <footer>
+        <div class="footer-section ad">
+            <a href="#">Advertising</a>&nbsp;&nbsp;<a href="#">Business</a>
+        </div>
+        <div class="footer-section priv">
+            <a href="#">Privacy</a>&nbsp;&nbsp;<a href="#">Terms</a>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
