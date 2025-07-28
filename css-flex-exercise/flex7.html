@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Holy Grail Layout</title>
+</head>
+<style>
+  body{
+   height: 100vh;
+   width: 100vw;
+   overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+    position: relative;
+  }
+.container{
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+  .Holy-grail{
+      margin-top: 30px 10px;
+      cursor: pointer;
+      background-color: whitesmoke;
+  }
+  .title {
+    height: 40px;
+    width: 100%;
+    color: #eee;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgba(108, 9, 115, 0.934);
+    position: fixed;
+    top: 0;
+    align-content: center;
+  }
+  .links{
+    width: 300px;
+    height: 800px;
+    background-color:royalblue;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    padding: 45px;
+    transition:step-end 1s ;
+  }
+  @keyframes slideRight{
+      0%{transform:translateX(0)}
+      50%{transform:translateX(-50px)}
+      100%{transform:translateX(100px)}
+       100%{transform:translateX(100px)}
+  }
+  .title {
+    animation: slideRight 2.5s ease-in-out 2s infinite alternate both;
+  }
+  .links a:hover{
+    display: list-item;
+    }
+    {transition-duration: 2s;
+  }
+  .links a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #eee;    
+  }
+  li{
+    list-style: none;
+  }
+  .item-layout *{
+    height: 300px;
+    width: 300px;
+    box-sizing: border-box;
+    box-shadow: 2px 3px 4px 2.3px lightgrey;
+    border-radius: 5px;
+    padding: 20px;
+  }
+   .item-layout {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    padding: 48px;
+    gap: 16px;
+   }
+  footer{
+    height: 30px;
+    width: 100%;
+    color:rgb(173, 23, 173);
+    background-color:rgb(227, 227, 227);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>
+<body>
+  <div class="Holy-grail">
+    <header class="title">MY AWESOME WEBSITE</header>
+    <div class="container">
+        <div class="links">
+        <li class="list-item"><a href="#">⭐-link one</a></li>
+        <li class="l2"><a href="#">🧑‍🏫-link two</a></li>
+        <li class="l3"><a href="#">🖌️-link three</a></li>
+        <li class="l4"><a href="#">👌-link four</a></li>
+    </div>
+    <div class="item-layout">
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, provident?</div>
+      <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus soluta repellendus ab facere dolorum omnis!</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis impedit omnis, ipsam suscipit repellendus eius! Fuga debitis rerum nihil?</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, eius. Magnam vitae distinctio doloribus nam quae, quos dolore reiciendis ab est! Aut a iure quam?</div>
+      <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nihil libero provident est odio voluptates a ullam, aliquid error blanditiis? Quas laudantium exercitationem a repudiandae esse ipsum, doloremque accusantium tenetur?</div>
+      <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores recusandae nisi neque fugiat, debitis itaque nihil laboriosam unde aperiam officiis sunt pariatur odio, ipsa consequatur perspiciatis obcaecati voluptate est quasi fuga eligendi alias dolor animi!</div>
+    </div>
+    </div>
+    <footer>The Odin Project ❤️ </footer>
+  </div> 
+</body>
+</html>
